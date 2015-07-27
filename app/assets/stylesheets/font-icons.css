@@ -227,6 +227,7 @@
 .icon-badges-votes-04:before {
   content: "9";
 }
+/*
 .icon-badges-votes-05:before {
   content: "!";
 }
@@ -316,7 +317,7 @@
 }
 .icon-documents-bookmarks-03:before {
   content: "\";
-}
+}*/
 .icon-documents-bookmarks-04:before {
   content: "\e000";
 }
