@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@font-face {
+/*@font-face {
   font-family: "line-icons";
   src:url("line-icons.eot");
   src:url("line-icons.eot?#iefix") format("embedded-opentype"),
@@ -10,7 +10,7 @@
   font-weight: normal;
   font-style: normal;
 
-}
+}*/
 
 [data-icon]:before {
   font-family: "line-icons" !important;
