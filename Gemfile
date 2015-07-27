@@ -46,17 +46,17 @@ end
 
 gem 'devise'
 gem 'simple_form'
-gem 'country_select'
+# gem 'country_select'
 gem 'cancancan'
 gem 'rolify'
-gem 'friendly_id'
-gem 'invisible_captcha'
-gem 'carrierwave'
-gem 'cloudinary'
-gem 'sitemap_generator'
-gem 'whenever', require: false
-gem 'sucker_punch', '~> 1.0'
-gem 'newrelic_rpm'
+# gem 'friendly_id'
+# gem 'invisible_captcha'
+# gem 'carrierwave'
+# gem 'cloudinary'
+# gem 'sitemap_generator'
+# gem 'whenever', require: false
+# gem 'sucker_punch', '~> 1.0'
+# gem 'newrelic_rpm'
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'
