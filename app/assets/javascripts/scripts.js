@@ -147,7 +147,7 @@
 		};
 				
 		map = new google.maps.Map(document.getElementById('canvas-map'),mapOptions);
-		var image = 'assets/img/pmarker.png';
+		var image = 'pmarker.png';
 		var myLatLng = new google.maps.LatLng(-33.8892292, 151.1991089);
 		var beachMarker = new google.maps.Marker({
 			position: myLatLng,
