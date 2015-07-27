@@ -1,0 +1,28 @@
+<h1>Listing sponsorships</h1>
+
+<table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Company</th>
+      <th>Message</th>
+        <th colspan="3"></th>
+    </tr>
+
+  <%= content_tag_for(:tr, @sponsorships) do |sponsorship| %>
+    <td><%= sponsorship.name %></td>
+    <td><%= sponsorship.email %></td>
+    <td><%= sponsorship.phone %></td>
+    <td><%= sponsorship.company %></td>
+    <td><%= sponsorship.message %></td>
+      <td><%= link_to 'Show', sponsorship %></td>
+    <td><%= link_to 'Edit', edit_sponsorship_path(sponsorship), class: 'btn btn-edit' %></td>
+    <td><%= link_to 'Delete', sponsorship, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-destroy' %></td>
+  <% end %>
+</table>
+
+
+<div class="form-actions">
+  <%= link_to 'New Sponsorship', new_sponsorship_path, class: 'btn btn-success' %>
+</div>

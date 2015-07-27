@@ -1,0 +1,25 @@
+<!-- Newsletter Section -->
+    <section id="newsletter" class="section light">
+      <div class="overlay"></div>
+      <div class="container">
+        <article class="article-big animated hiding" data-animation="fadeInDown" data-delay="0">
+          <h5><span class="highlight">Register</span> for Updates</h5>
+          <p>No Spam - only <span class="highlight">latest news</span>, price and activity updates!</p>
+          <form action="//coderfactory.us7.list-manage.com/subscribe/post?u=1c644187b6d7e06d32bcae158&amp;id=f4a7e18bb7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form" target="_blank" novalidate>
+          <div style="position: absolute; left: -5000px;"><input type="text" name="b_1c644187b6d7e06d32bcae158_f4a7e18bb7" tabindex="-1" value=""></div>
+                
+            <div class="form-group form-inline">
+              <input type="email" class="form-control required" id="mce-EMAIL" name="EMAIL" placeholder="your@email.com" name="EMAIL"  /> 
+              
+
+			  <input type="submit" class="btn btn-xs btn-default" value="Submit" id="mc-embedded-subscribe"  />
+			  <span id="response">
+				<? require_once('assets/mailchimp/inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
+			  </span>
+            </div>
+           
+          </form>
+        </article>
+      </div>
+    </section>
+    <!-- End Newsletter Section -->

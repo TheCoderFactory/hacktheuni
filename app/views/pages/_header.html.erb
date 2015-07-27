@@ -1,0 +1,71 @@
+    <!-- Preloader -->
+    <div id="mask">
+        <div id="loader"><img src="<%= asset_path 'preloader.gif' %>" alt="preloader" /></div>
+    </div>
+    <header id="mobileheader" class="navigation-bar-header light visible-xs"></header>
+    <!-- Hero Section -->
+    <section id="hero" class="light">
+
+		<div class="" id="video-container">
+			<video autoplay loop class="fillWidth" id="video">
+				<source src="<%= asset_path 'main.mp4' %>" type="video/mp4"/>
+				<source src="<%= asset_path 'main.ogg' %>" type="video/ogg"/>
+				<source src="<%= asset_path 'main.webm' %>" type="video/webm"/>
+			</video>
+		</div>
+			
+      <div class="container">
+        <div class="home-bg">
+       <!--    <nav class="navigation navigation-social">
+            <ul class="navigation-bar">
+              <li><a href="#"><span class="fa fa-twitter"></span></a>
+              <li><a href="#"><span class="fa fa-facebook"></span></a>
+              <li><a href="#"><span class="fa fa-github"></span></a>
+              <li><a href="#"><span class="fa fa-vimeo-square"></span></a>
+              <li><a href="#"><span class="fa fa-google-plus"></span></a>
+              <li><a href="#"><span class="fa fa-instagram"></span></a>
+            </ul>
+          </nav> -->
+          <div class="hero-content text-center ">
+            <div class="hero-small">
+              <hr /><span>25 Sept 2015, Sydney Australia</span><hr />
+            </div>
+            <div class="hero-big">
+              <div class="hidden-md hidden-lg">Hack The Media</div>
+              <svg width="1000" height="150" class="hidden-xs hidden-sm">
+                <text fill="black" fill-opacity="0.2" font-size="112px" x="480" y="100" text-anchor="middle" stroke="#2da9ff" stroke-width="4px">Hack The Media</text>
+              </svg>
+            </div>
+            <div class="hero-normal">A Virtual Hackathon: Revolution in the media!</div>
+            <a href="#newsletter" class="btn btn-lg btn-3d"><i class="fa fa-play-circle fa-2x"></i> <span>Register for updates</span></a>
+			<!-- <a href="#" class="btn btn-sm btn-default">Watch video</a> -->
+          </div>          
+        </div>
+      </div>
+    </section> 
+    <!-- End Hero Section -->
+    <!-- Header -->
+    <header id="header" class="navigation-bar-header light hidden-xs">
+      <div class="container">
+        <nav class="navigation">
+          <div class="navigation-txt visible-xs" data-toggle="dropdown">Home</div>
+          <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <ul class="navigation-bar navigation-bar-left">
+            <li><a href="#about">About</a></li>
+            <!--<li><a href="#stat">Number Facts</a></li>-->
+            <!-- <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#price">Prices</a></li>
+            <li><a href="#elements">Shortcodes</a></li> -->
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#map">Contacts</a></li>
+            <!-- <li class="featured"><a href="register.html"><i class="fa fa-ticket fa-1x"></i>Buy Tickets</a></li> -->
+          </ul>
+        </nav>
+      </div>      
+    </header>
+    <!-- End Header -->

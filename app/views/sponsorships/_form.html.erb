@@ -1,0 +1,15 @@
+<%= simple_form_for(@sponsorship) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name, placeholder: 'Your name', label: false %>
+    <%= f.input :email, placeholder: 'Your email', label: false %>
+    <%= f.input :phone, placeholder: 'Your phone', label: false %>
+    <%= f.input :company, placeholder: 'Your company', label: false %>
+    <%= f.input :message, placeholder: 'Your message', label: false %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit 'Become a sponsor', class: 'btn btn-3d' %>
+  </div>
+<% end %>

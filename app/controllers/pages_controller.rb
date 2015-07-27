@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+	skip_before_action :authenticate_user!
   def home
   end
 
@@ -6,5 +7,8 @@ class PagesController < ApplicationController
   end
 
   def contact
+  end
+
+  def thanks
   end
 end

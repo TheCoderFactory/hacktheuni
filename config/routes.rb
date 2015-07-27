@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  resources :sponsorships
   get 'admin', to: 'pages#admin'
+  get 'thanks', to: 'pages#thanks'
   get 'contact', to: 'pages#contact'
   root 'pages#home'
   get 'pages/home'
