@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+.header-img {
+	/*background-image: url("HTU_header.jpg");*/
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.team {
+	background-color: white;
+}

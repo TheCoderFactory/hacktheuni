@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<div class="team container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-4">
+			<p>
+			  <%= image_tag(@team.picture_url, class: "img-responsive") %>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-8">
+			<h4>
+			  <strong><%= @team.name %></strong>
+			</h4>
+
+			<h6><strong>Description:</strong></h6>
+			<p><%= @team.description %></p>
+
+			<h6><strong>Video url:</strong></h6>
+			<p><%= @team.video_url %></p>
+
+			<h6><strong>Team members:</strong></h6>
+			<ul>
+			<% @team_members.each do |team_member| %>
+				
+					<li><%= team_member.name %></li>
+				
+			<% end %>
+			</ul>
+			<p>Invite people to your team</p>
+			<%= render 'invitations/form' %>
+
+
+
+
+			<% if current_user.invited_to_join?(@team.id) and !@team.users.include?(current_user) %>
+				<%= link_to 'Accept invitation to join team', join_team_path(@team), method: :post %>
+			<% end %>
+
+		</div>
+	</div>
+
+
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %> |
+<%= link_to 'Sign out', destroy_user_session_path, method: :delete %> |
+<%= link_to 'Delete', team_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>

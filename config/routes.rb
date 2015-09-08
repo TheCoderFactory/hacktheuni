@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
+  resources :invitations
+  resources :teams do
+    member do
+      get :join
+    end
+  end
   resources :sponsorships
   get 'admin', to: 'pages#admin'
   get 'thanks', to: 'pages#thanks'
   get 'contact', to: 'pages#contact'
+  get 'competitors_guide', to: 'pages#guide'
   root 'pages#home'
   get 'pages/home'
 
