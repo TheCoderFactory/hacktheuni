@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150913152845) do
+ActiveRecord::Schema.define(version: 20150914014912) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -78,11 +78,15 @@ ActiveRecord::Schema.define(version: 20150913152845) do
   create_table "teams", force: :cascade do |t|
     t.string   "name"
     t.string   "picture"
-    t.string   "description"
+    t.text     "description"
     t.string   "video_url"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "team_leader_id"
+    t.string   "slug"
   end
+
+  add_index "teams", ["slug"], name: "index_teams_on_slug", unique: true
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

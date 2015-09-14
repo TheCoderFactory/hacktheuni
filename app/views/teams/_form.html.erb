@@ -2,10 +2,10 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :picture %>
-    <%= f.input :description %>
-    <%= f.input :video_url %>
+    <%= f.input :name, label: 'Team name' %>
+    <%# f.input :picture, label: 'Do you have an image for your team?' %>
+    <%= f.input :description, label: "What is your team's idea?", input_html: { rows: 4 } %>
+    <%# f.input :video_url %>
   </div>
 
   <div class="form-actions">

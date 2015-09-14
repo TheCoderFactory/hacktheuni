@@ -32,6 +32,7 @@ class TeamsController < ApplicationController
   def create
     @team = Team.new(team_params)
     @team.users << current_user
+    @team.team_leader_id = current_user.id
 
     respond_to do |format|
       if @team.save
@@ -48,6 +49,7 @@ class TeamsController < ApplicationController
   # PATCH/PUT /teams/1.json
   def update
     respond_to do |format|
+      restaurant.slug = nil
       if @team.update(team_params)
         format.html { redirect_to @team, notice: 'Team was successfully updated.' }
         format.json { render :show, status: :ok, location: @team }

@@ -44,7 +44,7 @@
             <a href="/users/sign_up" class="btn btn-lg btn-3d"><i class="fa fa-play-circle fa-2x"></i> <span>Register - it's FREE!</span></a>
 			<!-- <a href="#" class="btn btn-sm btn-default">Watch video</a> -->
             <br> <br> 
-            <p>Brought to you by<br><img src="<%= asset_path 'cfwide.png' %>" alt="Coder Factory Logo"></p>
+            <p>Brought to you by<br><a href="https://coderfactory.com" target="_blank"><img src="<%= asset_path 'headerlogo.png' %>" alt="Coder Factory Logo"></a></p>
           </div>          
         </div>
       </div>
@@ -69,8 +69,13 @@
             <li><a href="#elements">Shortcodes</a></li> -->
             <li><a href="#sponsors">Sponsors</a></li>
             <li><a href="#map">Contact</a> |</li>
-            <li><a href="/teams">Teams</a></li>
             <li><a href="/competitors_guide">Competitor's Guide</a></li>
+            <% if user_signed_in? %>
+              <li><a href="/teams">Teams</a></li>
+              <% if current_user.has_role? :admin %>
+                <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+              <% end %>
+            <% end %>
             <!-- <li class="featured"><a href="register.html"><i class="fa fa-ticket fa-1x"></i>Buy Tickets</a></li> -->
           </ul>
         </nav>

@@ -4,20 +4,34 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-4">
 			<p>
-			  <%= image_tag(@team.picture_url, class: "img-responsive") %>
+				<% if @team.picture.present? %>
+			  	<%= image_tag(@team.picture_url, class: "img-responsive") %>
+			  <% else %>
+			  	<%= image_tag 'team.png', class: 'img-responsive' %>
+			  <% end %>
 			</p>
 		</div>
 		<div class="col-xs-12 col-sm-8">
+			<p id="notice"><%= notice %></p>
 			<h4>
 			  <strong><%= @team.name %></strong>
 			</h4>
 
-			<h6><strong>Description:</strong></h6>
+			<h6><strong>Team Idea:</strong></h6>
 			<p><%= @team.description %></p>
-
-			<h6><strong>Video url:</strong></h6>
-			<p><%= @team.video_url %></p>
-
+			<hr>
+			<% if @team.video_url.present? %>
+				<h6><strong>Sumbmission url:</strong></h6>
+				<p><%= @team.video_url %></p>
+			<% else %>
+				<% if Date.today >= '2015-10-01'.to_date %>
+					<%= simple_form_for @team do |f| %>
+						<%= f.input :video_url, label: 'Enter the URL of your Youtube submission' %>
+						<%= f.submit 'Submit video', class: 'btn' %>
+					<% end %>
+				<% end %>
+			<% end %>
+			<hr>
 			<h6><strong>Team members:</strong></h6>
 			<ul>
 			<% @team_members.each do |team_member| %>
