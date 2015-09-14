@@ -1,0 +1,36 @@
+<h1>Listing participants</h1>
+
+<table class="table">
+    <tr>
+      <th>User</th>
+      <th>Contact_phone</th>
+      <th>Usyd_student</th>
+      <th>Study</th>
+      <th>Age</th>
+      <th>Resident</th>
+      <th>Residence</th>
+      <th>Pitch_idea</th>
+      <th>Skills</th>
+        <th colspan="3"></th>
+    </tr>
+
+  <%= content_tag_for(:tr, @participants) do |participant| %>
+    <td><%= participant.user %></td>
+    <td><%= participant.contact_phone %></td>
+    <td><%= participant.usyd_student %></td>
+    <td><%= participant.study %></td>
+    <td><%= participant.age %></td>
+    <td><%= participant.resident %></td>
+    <td><%= participant.residence %></td>
+    <td><%= participant.pitch_idea %></td>
+    <td><%= participant.skills %></td>
+      <td><%= link_to 'Show', participant %></td>
+    <td><%= link_to 'Edit', edit_participant_path(participant), class: 'btn btn-edit' %></td>
+    <td><%= link_to 'Delete', participant, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-destroy' %></td>
+  <% end %>
+</table>
+
+
+<div class="form-actions">
+  <%= link_to 'New Participant', new_participant_path, class: 'btn btn-success' %>
+</div>

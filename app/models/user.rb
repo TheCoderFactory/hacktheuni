@@ -7,6 +7,13 @@ class User < ActiveRecord::Base
 
   belongs_to :team
   has_many :invitations
+  has_one :participant
+
+  # after_create :add_participant_role
+
+  # def add_participant_role
+  #   add_role :participant
+  # end
 
   def invited_to_join?(team_id)
   	# @team = Team.find(team_id)

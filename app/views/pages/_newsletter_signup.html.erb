@@ -3,22 +3,23 @@
       <div class="overlay"></div>
       <div class="container">
         <article class="article-big animated hiding" data-animation="fadeInDown" data-delay="0">
-          <h5><span class="highlight">Register</span> for Updates</h5>
-          <p>No Spam - only <span class="highlight">latest news</span>, price and activity updates!</p>
-          <form action="//coderfactory.us7.list-manage.com/subscribe/post?u=1c644187b6d7e06d32bcae158&amp;id=f4a7e18bb7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form" target="_blank" novalidate>
-          <div style="position: absolute; left: -5000px;"><input type="text" name="b_1c644187b6d7e06d32bcae158_f4a7e18bb7" tabindex="-1" value=""></div>
-                
-            <div class="form-group form-inline">
-              <input type="email" class="form-control required" id="mce-EMAIL" name="EMAIL" placeholder="your@email.com" name="EMAIL"  /> 
-              
+          <h5><span class="highlight">Register</span> - it's FREE :)</h5>
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
 
-			  <input type="submit" class="btn btn-xs btn-default" value="Submit" id="mc-embedded-subscribe"  />
-			  <span id="response">
-				<? require_once('assets/mailchimp/inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
-			  </span>
-            </div>
-           
-          </form>
+  <div class="form-inputs">
+    <%= f.input :name, label: 'Your name', required: true %>
+    <%= f.input :email, label: 'Your email', required: true %>
+    <%= f.input :password, label: 'Pick a password', required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Register for HackThe.University" %>
+  </div>
+<% end %>
+</div></div>
         </article>
       </div>
     </section>

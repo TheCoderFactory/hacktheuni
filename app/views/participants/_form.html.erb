@@ -1,0 +1,18 @@
+<%= simple_form_for(@participant) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :pitch_idea, label: 'Do you have an idea to pitch?', as: :select %>
+    <%= f.input :skills, label: 'What skills do you bring?', as: :check_boxes, collection: ['Big ideas', 'Marketing', 'Communications', 'App development', 'Design', 'Engineering', 'Health', 'Finance', 'Politics', 'Law', 'Other'] %>
+    <%= f.input :usyd_student, label: 'Are you a student at University of Sydney?', as: :select %>
+    <%= f.input :study, label: 'What are you studying?' %>
+    <%= f.input :age, label: 'How old are you?' %>
+    <%= f.input :resident, label: 'Are you a a resident of the Queen Mary Building?', as: :select %>
+    <%= f.input :residence, label: 'Another residence? Which one?' %>
+    <%= f.input :contact_phone, label: 'Please provide a contact phone number' %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit 'Finalise registration', class: 'btn btn-success' %>
+  </div>
+<% end %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :participants
   resources :invitations
   resources :teams do
     member do
@@ -11,13 +12,8 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
   get 'competitors_guide', to: 'pages#guide'
   root 'pages#home'
-  get 'pages/home'
 
-  get 'pages/admin'
-
-  get 'pages/contact'
-
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations" }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
